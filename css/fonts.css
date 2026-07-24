@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Jet";
+  src: url("../assets/font/JetBrainsMono-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../assets/fonts/Euclid\ Circular\ A\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manege";
+  src: url("../assets/fonts/ManegeDemo-Light.ttf");
+}
