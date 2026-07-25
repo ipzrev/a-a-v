@@ -190,3 +190,162 @@ p {
   font-size: 16px;
   color: #9c9c9c;
 }
+
+/* form  */
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: rgb(255, 255, 255);
+  padding: 46px 24px 46px 24px;
+}
+
+.input {
+  background-color: #f9f9f9;
+  padding: 16px;
+  font-family: "Jet", monospace;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  color: #000;
+  margin-bottom: 46px;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  color: #999999;
+}
+
+input:focus {
+  outline: none;
+  /* border-bottom: 1px solid #000000; */
+}
+
+.input:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-question {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #999999;
+}
+
+.label-radio {
+  font-family: "Jet", monospace;
+  font-size: 16px;
+  color: #999999;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.label-radio input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+}
+
+.custom-radio::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s;
+}
+
+.label-radio input:checked + .custom-radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.label-radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 46px;
+}
+
+.form-title {
+  color: #000;
+  font-size: 16px;
+}
+
+.form-divider {
+  background-color: #ccc;
+}
+
+.form-button {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #000;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Jet", monospace;
+  transition: opacity 0.3s;
+}
+
+.form-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 14px 18px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+
+  font-family: "Jet", monospace;
+  font-size: 14px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+
+  transition: 0.35s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-success {
+  background: #184214;
+  color: #fff;
+}
+
+.toast-error {
+  background: #c0392b;
+  color: #fff;
+}
