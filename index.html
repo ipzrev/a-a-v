@@ -16,20 +16,20 @@
         <div class="word-changing" id="changingWord"></div>
       </div>
       <div class="img-1"></div>
-      <div><p>Антон и Виталина</p></div>
+      <p>Антон и Виталина</p>
     </section>
 
     <section class="dear-friends">
       <p>Дорогие друзья!</p>
       <div class="divider"></div>
-      <div class="paragraph">
+      <p class="paragraph">
         Есть в жизни моменты, когда хочется, чтобы рядом были самые близкие,
         любимые и родные люди. Именно такой момент наступает в нашей жизни.
-      </div>
-      <div class="paragraph">
+      </p>
+      <p class="paragraph">
         Хотим, чтобы вы разделили с нами радость и были на торжестве в самый
         лучший и трогательный день в нашей жизни!
-      </div>
+      </p>
     </section>
 
     <section class="gallery">
@@ -75,6 +75,37 @@
       <p>Контакты</p>
       <div class="divider"></div>
       <div class="paragraph">Антон - 8 800 000 000</div>
+    </section>
+
+    <section class="form-section">
+      <p class="form-title">Анкета</p>
+      <div class="form-divider divider"></div>
+      <form class="form" id="form" novalidate>
+        <div id="toast" class="toast"></div>
+        <p class="form-question">Сможете ли присутствовать?</p>
+        <input
+          class="input"
+          type="text"
+          name="name"
+          placeholder="Фамилия и имя"
+          required
+        />
+        <div class="label-radio-container">
+          <label class="label-radio">
+            <input type="radio" name="attendance" value="Да" required />
+            <span class="custom-radio"></span>
+            <span>С удовольствием приду</span>
+          </label>
+
+          <label class="label-radio">
+            <input type="radio" name="attendance" value="Нет" required />
+            <span class="custom-radio"></span>
+            <span>К сожалению, не могу</span>
+          </label>
+        </div>
+
+        <button class="form-button">Отправить</button>
+      </form>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
