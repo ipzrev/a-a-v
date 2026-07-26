@@ -1,3 +1,9 @@
+:root {
+  --main-color: chartreuse;
+  --background-color: #fff;
+  --font-size: 18px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -289,7 +295,6 @@ input:focus {
 
 .form-title {
   color: #000;
-  font-size: 16px;
 }
 
 .form-divider {
@@ -314,15 +319,14 @@ input:focus {
 .toast {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 50%;
 
-  padding: 14px 18px;
-  background: #111;
-  color: #fff;
-  border-radius: 12px;
+  padding: 16px 46px;
+
+  white-space: nowrap;
 
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translate(-50%, -20px);
   pointer-events: none;
 
   transition: 0.35s;
@@ -330,16 +334,16 @@ input:focus {
 
 .toast.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .toast-success {
-  background: #184214;
+  background: #000000;
   color: #fff;
 }
 
 .toast-error {
-  background: #c0392b;
+  background: #ff7575;
   color: #fff;
 }
 

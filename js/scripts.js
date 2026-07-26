@@ -205,7 +205,7 @@ form.addEventListener("submit", async (e) => {
   const attendance = form.elements.attendance.value;
 
   if (!name || !attendance) {
-    showToast("Заполните все обязательные поля", "error");
+    showToast("Заполните все поля", "error");
     return;
   }
 
@@ -222,7 +222,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     form.reset();
-    showToast("✓ Ответ отправлен");
+    showToast("Ответ отправлен");
   } catch (err) {
     console.error(err);
     showToast("Не удалось отправить форму", "error");
