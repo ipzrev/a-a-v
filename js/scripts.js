@@ -165,7 +165,7 @@ window.addEventListener("load", () => {
       scrub: 0.7,
       invalidateOnRefresh: true,
       anticipatePin: 1,
-      markers: true,
+      // markers: true,
     },
   });
 

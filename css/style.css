@@ -199,7 +199,7 @@ p {
   align-items: center;
   gap: 24px;
   background-color: rgb(255, 255, 255);
-  padding: 46px 24px 46px 24px;
+  padding: 46px 24px 0 24px;
 }
 
 .input {
@@ -221,10 +221,6 @@ p {
 
 input:focus {
   outline: none;
-  /* border-bottom: 1px solid #000000; */
-}
-
-.input:focus {
   border-bottom: 1px solid #000000;
 }
 
@@ -325,9 +321,6 @@ input:focus {
   color: #fff;
   border-radius: 12px;
 
-  font-family: "Jet", monospace;
-  font-size: 14px;
-
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
@@ -348,4 +341,57 @@ input:focus {
 .toast-error {
   background: #c0392b;
   color: #fff;
+}
+
+.qr-image {
+  margin-top: 30px;
+}
+
+.form-text {
+  padding: 64px 24px;
+  color: #00000066;
+  text-align: center;
+  line-height: 140%;
+}
+
+/* Заглушка */
+
+.mobile-site {
+  display: block;
+}
+
+.desktop-placeholder {
+  display: none;
+}
+
+@media (min-width: 481px) {
+  .mobile-site {
+    display: none;
+  }
+
+  .desktop-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+
+    background: #f8f6f3;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .desktop-placeholder h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  .desktop-placeholder p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+  }
 }
